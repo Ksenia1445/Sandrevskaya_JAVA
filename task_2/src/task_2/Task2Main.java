@@ -8,13 +8,9 @@ public class Task2Main {
         int a = scanner.nextInt();
         System.out.print("Введите второе число (b): ");
         int b = scanner.nextInt();
-        if (a > b) {
-            System.out.println("a > b");
-        } else if (a < b) {
-            System.out.println("a < b");
-        } else {
-            System.out.println("a = b");
-        }
+        
+        compareValues(a, b);
+        
         System.out.println("\nРезультаты операций:");
         System.out.println(a + " + " + b + " = " + (a + b));
         System.out.println(a + " - " + b + " = " + (a - b));
@@ -26,7 +22,7 @@ public class Task2Main {
             System.out.println("Деление на ноль невозможно!");
         }
     	System.out.print("\nВведите первую строку: ");
-        scanner.nextLine(); // Очистка буфера после nextInt()
+        scanner.nextLine();
         String strA = scanner.nextLine();
         System.out.print("Введите вторую строку: ");
         String strB = scanner.nextLine();
@@ -45,4 +41,14 @@ public class Task2Main {
         }
         scanner.close();
     }
+	
+	public static void compareValues(int a, int b) {
+        if (a > b) {
+            System.out.println("a > b");
+        } else if (a < b) {
+            System.out.println("a < b");
+        } else {
+            System.out.println("a = b");
+        }
+	}
 }
